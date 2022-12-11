@@ -7,10 +7,11 @@
 
 // "use strict"
 function returnThis(){
+    console.log(typeof this);
     return this
 }
 
-console.log(returnThis())
+// console.log(returnThis())
 
 
 // Strict mode makes several changes to the normal js
@@ -18,18 +19,18 @@ console.log(returnThis())
 // => fixes mistakes that make it difficult for js engine to perform optimization
 // => prohibits some syntax likely to be defined in future versions of ECMA Script
 
-let foo = 17;
-console.log(foo);
+// let foo = 17;
+// console.log(foo);
 
 // TODO:SHOULD WE USE JAVASCRIPT use strict everywhere
 
 
 // FIXME:didn't understand
-console.log(returnThis() === global); // false for strict mode, else true
-console.log(typeof returnThis.call(2) === 'object') // false for strict mode, else true
-fun.apply(null) == null;
-fun.call(undefined) === undefined;
-typeof fun.bind(true)() === 'boolean';
+// console.log(returnThis() === global); // false for strict mode, else true
+// console.log(typeof returnThis.call(2) === 'object') // false for strict mode, else true
+console.log(returnThis.apply(null) == null);
+console.log(returnThis.call(undefined) === undefined);
+console.log(typeof returnThis.bind(true)() === 'boolean');
 
 // in sloppy mode any primitive or null or undefined value is always an object(boxed)
 
