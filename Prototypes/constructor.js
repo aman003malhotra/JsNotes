@@ -59,7 +59,7 @@ p1.printName()
 
 function PersonThrowError(name, age){
     console.log(new.target); // undefined
-    if(!new.target){
+    if(!new.target){ // we can also use "this instanceOf Person"
         throw new Error('should use new')
     }
     this.age = age;
@@ -67,4 +67,25 @@ function PersonThrowError(name, age){
 }
 
 
-p = new PersonThrowError('a', 10);
+p = new PersonThrowError('a', 10); // if new is not used then the attributes are attached to the gloabal.
+
+
+// A constructor function should be called with new.
+// ==> In constructor and functions invoked using the new operator, new.target returns a reference to the constructor or function.
+// ==> In normal function calls, new.target is undefined.
+// ==> if we just use "use strict", then constructor won't be called without a new keyword.as `thi` will be undefined.
+// ==> The instanceOf operator tests to see if the prototype property of a constructor appears anywhere in the prototype chain of the object.
+
+// ES6 Classes
+// ==> ES6 classes are "special functions".
+// ==> They can be thought of as syntactic sugar to constructor functions
+
+class PersonClass{
+    constructor(age, name){
+        this.name = name;
+        this.age = age;
+    }
+}
+
+pclass = new PersonClass('aman', 21);
+console.log(pclass)
