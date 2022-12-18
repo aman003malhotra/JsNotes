@@ -116,7 +116,7 @@ var obj5 = {
     firstName: 'Jane',
     friends: ['Tarjan', 'Cheetah'],
     loop: function(){
-        // TODO:ASKSIR this and that
+        // TODO:// Pending
         'use strict';
         var that = this;
         this.friends.forEach(function (friend) { // story would be different for arrow function
@@ -164,7 +164,7 @@ var obj7 = {
     firstName: 'Jane',
     friends: ['Tarjan', 'Cheetah'],
     loop: function(){
-        this.friends.forEach( (friend) => { // story would be different for arrow function
+        this.friends.forEach( (friend) => { //here it is
             console.log(this.firstName + " knows " + friend)
         });
     }

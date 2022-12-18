@@ -54,5 +54,5 @@ console.log(Symbol.keyFor(globalSym));
 // Symbols are not always unique. 
 
 // WELL KNOWN SYMBOLS
-The global object symbol has several properties that serve as constants for so-called well known symbols. These symbols let you configure how ES6 treats an object,
-by using them as property keys.
+// The global object symbol has several properties that serve as constants for so-called well known symbols. These symbols let you configure how ES6 treats an object,
+// by using them as property keys.

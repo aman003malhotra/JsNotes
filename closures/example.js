@@ -1,14 +1,14 @@
 // Uncomment each example separately and run it
 
 // EXAMPLE 1
-// let count = 0;
+let count = 0;
 
-// setTimeout(function(){
-//     count++;
-//     console.log(`In SetTimeout - ${count}`);
-// }, 1000);
+setTimeout(function(){
+    count++;
+    console.log(`In SetTimeout - ${count}`);
+}, 1000);
 
-// console.log(`${count}`); 
+console.log(`${count}`); 
 
 // TODO:AskSirtoexplainitIIFE
 // NOTE
