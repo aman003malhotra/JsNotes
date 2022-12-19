@@ -1,0 +1,1 @@
+// Function Expression - It allows us to create a new function in the middle of any expression.
