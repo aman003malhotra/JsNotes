@@ -69,3 +69,8 @@ let promise = new Promise((resolve) =>
     setTimeout(() => resolve('done'), 1000)
 )
 .then(console.log)
+
+
+// ==> A finally handler doesn’t get the outcome of the previous handler (it has no arguments). This outcome is passed through instead, to the next suitable handler.
+// ==> If a finally handler returns something, it’s ignored.
+// ==> When finally throws an error, then the execution goes to the nearest error handler.

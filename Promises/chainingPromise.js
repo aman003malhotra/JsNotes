@@ -57,12 +57,28 @@ pErr.catch((err) => console.log('caught', err));
 // Unhandeled Promises
 // it will throw an error for unhandeled promise rejection
 
+// The easiest way to catch all errors is to append .catch to the end of chain
+
+new Promise((resolve, reject) => {
+    resolve("ok");
+  }).then((result) => {
+    throw new Error("Whoops!"); // rejects the promise
+  }).catch(console.log); // Error: Whoops!
 
 
+new Promise((resolve, reject) => {
+resolve("ok");
+}).then((result) => {
+blabla(); // no such function
+}).catch(console.log); // ReferenceError: blabla is not defined
 
+new Promise(function(resolve, reject) {
+    setTimeout(() => {
+    reject(new Error("Whoops!"))
+    }, 1000);
+    }).catch(console.log);
 
-
-
-
-
-
+    // ! VERY IMPORTANT
+// if an error occurs asynchronously the catch block{} wont be triggered and reject(err) won't be called.
+// Try catch block does not wait for the setTimeout function to finish but the promise does wait, so when the error occurs and the promise is settled, 
+// the error is thrown but reject(err) has not been called as the execution flow has gone past the try catch block

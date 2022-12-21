@@ -6,10 +6,13 @@ function sleep(ms, value) {
 }
 
 // an already resolved promise if the iterable passes is empty.
-Promise.all([sleep(3000,'a'), sleep(2000, 'b'), sleep(3500, 'c')])
+Promise.all([sleep(6000,'a'), sleep(2000, 'b'), sleep(3500, 'c')])
 .then(() => {
     console.log('finished');
 })
+
+// Please note that the order of the resulting array members is the same as in its source promises. 
+// Even though the first promise takes the longest time to resolve, it’s still first in the array of results.
 
 // Promise.all([
 //     asyncFunc1(),
@@ -40,9 +43,11 @@ Promise.all([sleep(3000,'a'), sleep(2000, 'b'), sleep(3500, 'c')])
 // Promise.allSettled method returns a promise that resolves after all of the given promises have either 
 // settled, with an array of objects that each describes the outcome of each promise 
 
+// Promise.allSettled just waits for all promises to settle, regardless of the result. The resulting array has
+
 Promise.allSettled([Promise.resolve('a'), Promise.reject('a')])
 .then(arr => {
-    console.log(arr)
+    console.log("allSettled",arr)
 })
 
 // check what happened with all the promises

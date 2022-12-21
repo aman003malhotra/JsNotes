@@ -29,9 +29,12 @@ let userAdmin = {
   userGuest.admin?.(); // nothing happens (no such method)
 
 
+// The optional chaining ?. is not an operator, but a special syntax construct, that also works with functions and square brackets.
 
+// ?.() is used to call a function that may not exist.
 
+// ?.[] syntax also works, if we’d like to use brackets [] to access properties instead of dot .. Similar to previous cases
 
+// delete user?.name; // delete user.name if user exists
 
-
-
+// ?. does not work for writing
