@@ -1,6 +1,5 @@
 // Everything in JS is javascript
 
-
 // anything that is not a primitive value is an object. that includes arrays, functions, and object themselves
 // an object is a collection of properties 
 // a property is a named container for a value with some additional attributes.

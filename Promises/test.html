@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // TODO:Ask sir the answer is  not matching of what is given in https://javascript.info/microtask-queue
+let promise = Promise.reject(new Error("Promise Failed!"));
+promise.then();
+window.addEventListener('unhandledrejection', event => console.log(event.reason));
+setTimeout(() => promise.catch(err => console.log('caught')), 0);
+</script>
+</html>

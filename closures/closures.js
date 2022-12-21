@@ -30,6 +30,39 @@ printName() // prints name changed
 // A closures refers to the ability of a function to
 // ==> remember its lexical parent scope
 // ==> has read/write access to variable defined in the parent environment
-
+// A closure is a function that remembers its outer variables and can access them all functions in JavaScript are closures
 
 // the search goes outside from block to function to module scope and inherits the value in parent scope
+
+function makeCounter() {
+    let count = 0;
+  
+    return function() {
+      return count++;
+    };
+  }
+  
+let counter = makeCounter();
+let counter2 = makeCounter();
+
+console.log( counter() ); // 0
+console.log( counter() ); // 1
+
+console.log( counter2() ); // ? ANSWER - 0
+console.log( counter2() ); // ? ANSWER - 1
+
+// TODO:Ask Sir source https://javascript.info/closure
+// let value = "Surprise!";
+
+// function f() {
+//   let value = "the closest value";
+
+//   function g() {
+//     debugger; // in console: type alert(value); Surprise!
+//   }
+
+//   return g;
+// }
+
+// let g = f();
+// g();
