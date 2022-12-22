@@ -11,7 +11,7 @@ function returnThis(){
     return this
 }
 
-// console.log(returnThis())
+console.log(returnThis())
 
 
 // Strict mode makes several changes to the normal js
@@ -22,10 +22,8 @@ function returnThis(){
 // let foo = 17;
 // console.log(foo);
 
-// TODO:SHOULD WE USE JAVASCRIPT use strict everywhere
 
 
-// FIXME:didn't understand
 // console.log(returnThis() === global); // false for strict mode, else true
 // console.log(typeof returnThis.call(2) === 'object') // false for strict mode, else true
 console.log(returnThis.apply(null) == null);

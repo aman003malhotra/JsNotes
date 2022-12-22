@@ -66,6 +66,7 @@ const obj3 = {
 }
 obj3.doo();
 const bar  = obj3.doo;
+console.log("bar called");
 bar();// this has nothing to do with the where and how the function is declared but have everything to do with how that function is invoke/called
 
 
@@ -109,6 +110,8 @@ var obj4 = {
 
 obj4.loop();
 
+
+// TODO:ASK sir why that is used
 // WORKAROUND 1
 console.log("USING STRICT")
 var obj5 = {
@@ -116,7 +119,6 @@ var obj5 = {
     firstName: 'Jane',
     friends: ['Tarjan', 'Cheetah'],
     loop: function(){
-        // TODO:// Pending
         'use strict';
         var that = this;
         this.friends.forEach(function (friend) { // story would be different for arrow function
@@ -124,7 +126,7 @@ var obj5 = {
         });
     }
 }
-
+console.log("obj5")
 obj5.loop();
 
 
@@ -164,7 +166,7 @@ var obj7 = {
     firstName: 'Jane',
     friends: ['Tarjan', 'Cheetah'],
     loop: function(){
-        this.friends.forEach( (friend) => { //here it is
+        this.friends.forEach( (friend) => { //here it is arrow function
             console.log(this.firstName + " knows " + friend)
         });
     }

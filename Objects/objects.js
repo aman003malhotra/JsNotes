@@ -1,4 +1,4 @@
-// Everything in JS is javascript
+// Everything in JS is object
 
 // anything that is not a primitive value is an object. that includes arrays, functions, and object themselves
 // an object is a collection of properties 
@@ -10,6 +10,7 @@
 // ===================PROPERTIES=======================
 
 let obj = {};
+let obj2 = {};
 // if the key is not a string then it is automatically converted into the string
 obj[obj] = 10;
 console.log(obj);
