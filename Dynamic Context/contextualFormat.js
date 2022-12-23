@@ -19,7 +19,6 @@ function bluify(e){
 // in node Cjs modules 
 
 
-// TODO:Ask Sir
 console.log(this == global)
 
 function foo(){

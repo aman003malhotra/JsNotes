@@ -24,8 +24,8 @@ console.log(returnThis())
 
 
 
-// console.log(returnThis() === global); // false for strict mode, else true
-// console.log(typeof returnThis.call(2) === 'object') // false for strict mode, else true
+console.log(returnThis() === global); // false for strict mode, else true
+console.log(typeof returnThis.call(2) === 'object') // false for strict mode, else true
 console.log(returnThis.apply(null) == null);
 console.log(returnThis.call(undefined) === undefined);
 console.log(typeof returnThis.bind(true)() === 'boolean');

@@ -66,5 +66,7 @@ console.log(diag(4,3));
 // Most JavaScript style guides don’t recommend semicolons after function and class declarations. for exporting
 
 // RE-EXPORT 
+export {sayHi} from './say.js'; // re-export sayHi
 
+export {default as User} from './user.js'; // re-export default
 

@@ -21,7 +21,6 @@ Object.getPrototypeOf(Function);
 // What is prototype
 // a prototype is a working object instance
 
-// TODO:AskSir
 // There are two prototypes 
 // ==> prototype object on functions
 // Object prototypes (aka prototypes of objects)

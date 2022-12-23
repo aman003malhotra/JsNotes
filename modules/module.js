@@ -75,6 +75,7 @@ const all = require('./1'); // CJS
 // Similarly to AMD, they have direct support for asynchronous loading and configurable module
 
 export {print, inc};
+
 import {print, inc} from '../1.js' // ES6 we have to declare type = module in package.json
 
 

@@ -9,3 +9,13 @@ function once(func, context){
         return ran;
     }
 }
+
+function newfunc(){
+    console.log("hello")
+}
+
+once(newFunc);
+
+one();
+one();
+one();
